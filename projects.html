@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Projects - SmartBuild</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body class="bg-black text-white font-sans">
+
+  <!-- HEADER -->
+  <header class="max-w-7xl mx-auto flex justify-between items-center p-6">
+    <div class="flex items-center gap-3">
+      <img src="./Images/logo.jpg" alt="Logo" class="w-10 h-10">
+      <span class="text-xl font-bold">SmartBuild</span>
+    </div>
+    <nav class="hidden md:flex gap-8 font-medium">
+      <a href="index.html" class="hover:text-yellow-500">Home</a>
+      <a href="services.html" class="hover:text-yellow-500">Services</a>
+      <a href="projects.html" class="text-yellow-500">Projects</a>
+      <a href="about.html" class="hover:text-yellow-500">About</a>
+      <a href="contact.html" class="hover:text-yellow-500">Contact</a>
+    </nav>
+    <a href="https://wa.me/2348012345678" target="_blank"
+       class="bg-yellow-500 text-black px-4 py-2 rounded-xl font-semibold hover:bg-yellow-400">
+      Get Quote
+    </a>
+  </header>
+
+  <!-- HERO -->
+  <section class="text-center py-20 px-6 bg-gradient-to-b from-gray-900 to-black">
+    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+      Our <span class="text-yellow-500">Projects</span>
+    </h1>
+    <p class="mt-6 text-gray-300 max-w-2xl mx-auto">
+      Take a look at some of the construction projects we’ve worked on — from modern homes to large-scale buildings.
+    </p>
+  </section>
+
+  <!-- PROJECTS GRID -->
+  <section class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+    <!-- Project 1 (Slider) -->
+    <div class="bg-gray-900 rounded-2xl shadow-lg overflow-hidden">
+      <!-- Swiper -->
+      <div class="swiper projectSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="./Images/After stairs.jpg" class="w-full h-60 object-cover"></div>
+          <div class="swiper-slide"><img src="./Images/before stairs.jpg" class="w-full h-60 object-cover"></div>
+          <div class="swiper-slide"><img src="./Images/Finish.jpg" class="w-full h-60 object-cover"></div>
+        </div>
+        <!-- Controls -->
+        <div class="swiper-button-next text-yellow-500"></div>
+        <div class="swiper-button-prev text-yellow-500"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- Info -->
+      <div class="p-5">
+        <h2 class="text-xl font-bold">Three Story Building</h2>
+        <p class="text-gray-400 text-sm">A modern three story building with elegant finishing and outdoor lounge.</p>
+        <p class="mt-2 font-semibold">Completed: 2024</p>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="bg-gray-900 rounded-2xl shadow-lg overflow-hidden">
+      <img src="./Images/commercial complex.jpg" class="w-full h-60 object-cover">
+      <div class="p-5">
+        <h2 class="text-xl font-bold">Commercial Complex</h2>
+        <p class="text-gray-400 text-sm">Multi-purpose shopping and office complex with modern design.</p>
+        <p class="mt-2 font-semibold">Completed: 2026</p>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="bg-gray-900 rounded-2xl shadow-lg overflow-hidden">
+      <img src="./Images/renovation.jpeg" class="w-full h-60 object-cover">
+      <div class="p-5">
+        <h2 class="text-xl font-bold">Renovation Project</h2>
+        <p class="text-gray-400 text-sm">Full remodel of a family home, improving structure and aesthetics.</p>
+        <p class="mt-2 font-semibold">Completed: 2027</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CTA STRIP -->
+  <section class="bg-yellow-500 text-black text-center py-12">
+    <h2 class="text-2xl font-bold mb-2">Want a Project Like This?</h2>
+    <p class="mb-6">Click below to discuss your project directly with us on WhatsApp.</p>
+    <a href="https://wa.me/2348012345678" target="_blank"
+       class="bg-black text-yellow-500 px-6 py-3 rounded-xl font-semibold hover:bg-gray-800">
+      Start Chat
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 py-6 text-center text-sm">
+    © 2025 SmartBuild. All rights reserved.
+  </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".projectSwiper", {
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+
+</body>
+</html>

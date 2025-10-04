@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jøsßê®g – Engineering & Construction</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+<body class="bg-gray-950 text-white font-sans">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-6">
+      <!-- Logo -->
+      <div class="flex items-center gap-3">
+        <img src="./Images/logo.jpg" alt="Logo" class="w-10 h-10 rounded-lg bg-gray-800 p-1">
+        <span class="text-xl font-extrabold tracking-wide">Jøsßê®g.Ltd</span>
+      </div> 
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex gap-8 font-medium text-gray-300">
+        <a href="./services.html" class="hover:text-yellow-400">Services</a>
+        <a href="./projects.html" class="hover:text-yellow-400">Projects</a>
+        <a href="./about.html" class="hover:text-yellow-400">About</a>
+        <a href="./contact.html" class="hover:text-yellow-400">Contact</a>
+      </nav>
+
+      <!-- Right side -->
+      <div class="flex items-center gap-4">
+        <button class="hidden md:inline-block bg-yellow-500 text-black px-4 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition">
+          Get Quote
+        </button>
+        <!-- Mobile menu button -->
+        <button id="menuBtn" class="md:hidden text-3xl">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- BACKDROP OVERLAY -->
+  <div id="overlay" class="fixed inset-0 bg-black/60 hidden z-40"></div>
+
+  <!-- MOBILE SLIDE-IN MENU -->
+  <div id="mobileNav" class="fixed top-0 left-0 w-2/3 h-full bg-gray-900 transform -translate-x-full transition-transform duration-300 z-50 p-6 flex flex-col gap-6">
+    <button id="closeBtn" class="self-end text-2xl">✕</button>
+    <a href="./services.html" class="hover:text-yellow-400">Services</a>
+    <a href="./projects.html" class="hover:text-yellow-400">Projects</a>
+    <a href="./about.html" class="hover:text-yellow-400">About</a>
+    <a href="./contact.html" class="hover:text-yellow-400">Contact</a>
+    <button class="mt-4 bg-yellow-500 text-black px-4 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition">
+      Get Quote
+    </button>
+  </div>
+
+  <!-- HERO -->
+  <section class="text-center py-24 px-6 bg-gradient-to-b from-gray-900 to-black" data-aos="fade-up">
+    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+      We Build <span class="text-yellow-500">Modern Infrastructure</span><br> That Shapes the Future
+    </h1>
+    <p class="mt-6 text-gray-400 max-w-2xl mx-auto text-lg">
+      From residential homes to general construction projects, we combine civil engineering expertise with hands-on training to deliver durable, reliable, and sustainable work.
+    </p>
+    <button class="mt-8 bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 shadow-lg transition">
+      Explore Projects
+    </button>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="bg-gray-800 rounded-2xl p-6 text-center hover:bg-gray-700 transition" data-aos="zoom-in" data-aos-delay="100">
+      <div class="w-14 h-14 mx-auto flex items-center justify-center rounded-full bg-yellow-500 mb-4">
+        <!-- Cube Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+        </svg>
+      </div>
+      <h3 class="text-lg font-bold">Structural Design & Drafting</h3>
+      <p class="text-gray-400 text-sm mt-2">From AutoCAD floor plans to detailed structural models for houses and infrastructure.</p>
+    </div>
+    <div class="bg-gray-800 rounded-2xl p-6 text-center hover:bg-gray-700 transition" data-aos="zoom-in" data-aos-delay="200">
+      <div class="w-14 h-14 mx-auto flex items-center justify-center rounded-full bg-yellow-500 mb-4">
+        <!-- Building Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21h18M9 8h6m-6 4h6m-6 4h6M4 21V3h16v18" />
+        </svg>
+      </div>
+      <h3 class="text-lg font-bold">General Construction</h3>
+      <p class="text-gray-400 text-sm mt-2">Houses, site works, drainage, and small bridges — built with precision and quality.</p>
+    </div>
+    <div class="bg-gray-800 rounded-2xl p-6 text-center hover:bg-gray-700 transition" data-aos="zoom-in" data-aos-delay="300">
+      <div class="w-14 h-14 mx-auto flex items-center justify-center rounded-full bg-yellow-500 mb-4">
+        <!-- Clipboard Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m-7 9h6a2 2 0 002-2V7a2 2 0 00-2-2H9a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+      </div>
+      <h3 class="text-lg font-bold">Site Supervision & Materials</h3>
+      <p class="text-gray-400 text-sm mt-2">Managing workers, monitoring progress, and ensuring cost-effective materials usage.</p>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="max-w-7xl mx-auto p-8 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div class="col-span-2 bg-gray-900 rounded-2xl overflow-hidden shadow-lg">
+  <!-- Swiper container -->
+  <div class="swiper mySwiper w-full h-60">
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide"><img src="./Images/him.jpg" class="w-full h-60 object-cover"></div>
+      <div class="swiper-slide"><img src="./Images/After stairs.jpg" class="w-full h-60 object-cover"></div>
+      <div class="swiper-slide"><img src="./Images/Finish.jpg" class="w-full h-60 object-cover"></div>
+    </div>
+
+    <!-- Navigation buttons -->
+    <div class="swiper-button-next text-yellow-500"></div>
+    <div class="swiper-button-prev text-yellow-500"></div>
+    <!-- Pagination dots -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Project Info -->
+  <div class="p-5">
+    <h2 class="text-xl font-bold">Three Story Building</h2>
+    <p class="text-gray-400 text-sm">Construction · Stairs · Roof</p>
+    <p class="mt-2 font-semibold">Completed in 2025</p>
+  </div>
+  </div>
+    <div class="bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:scale-[1.02] transition" data-aos="fade-up" data-aos-delay="200">
+      <img src="./Images/foundation.jpeg" alt="Foundation Project" class="w-full h-40 object-cover">
+      <div class="p-4">
+        <h3 class="text-lg font-bold">Foundation Works</h3>
+        <p class="text-sm text-gray-400">Reinforcement, concrete pouring, soil compaction.</p>
+      </div>
+    </div>
+    <div class="bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:scale-[1.02] transition" data-aos="fade-up" data-aos-delay="400">
+      <img src="./Images/Drainage.webp" alt="Drainage Project" class="w-full h-40 object-cover">
+      <div class="p-4">
+        <h3 class="text-lg font-bold">Drainage Construction</h3>
+        <p class="text-sm text-gray-400">Concrete-lined drains for flood prevention.</p>
+      </div>
+    </div>
+  </section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="bg-gray-900 text-white py-16 px-6">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+    <!-- Engineer Photo -->
+    <div class="rounded-2xl overflow-hidden shadow-lg">
+      <img src="./Images/Engineer.jpg" alt="Civil Engineer" class="w-full h-[400px] object-cover">
+    </div>
+
+    <!-- Text -->
+    <div>
+      <h2 class="text-3xl font-bold mb-4">Meet the Engineer</h2>
+      <p class="text-gray-400 mb-4">
+        I am a passionate civil engineering student currently on 
+        Industrial Training, gaining hands-on experience by working 
+        on real-life construction projects. 
+      </p>
+      <p class="text-gray-400 mb-4">
+        My goal is to design and build structures that combine 
+        modern style with long-lasting quality.
+      </p>
+      <p class="text-yellow-500 font-semibold italic">“Building homes, building futures.”</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<footer id="contact" class="bg-gray-900 text-white py-12 mt-20 text-center px-6">
+  <div class="max-w-4xl mx-auto space-y-8">
+
+    <!-- Brand -->
+    <div>
+      <h3 class="font-bold text-3xl mb-3 text-yellow-500">Jøsßê®g Con. Ltd</h3>
+      <p class="text-gray-400 text-sm leading-relaxed">
+        Professional civil engineering and construction services, 
+        delivering quality projects that stand the test of time.
+      </p>
+    </div>
+
+    <!-- Contact Info -->
+    <div>
+      <h3 class="font-bold text-xl mb-3">Contact</h3>
+      <p class="text-gray-300">📧 brighdude01@gmail.com</p>
+      <p class="text-gray-300">📞 +234 811 902 3655</p>
+      <p class="text-gray-300">📍 Uromi, Edo State</p>
+    </div>
+
+    <!-- Social Icons -->
+    <div>
+      <h3 class="font-bold text-xl mb-3">Follow Us</h3>
+      <div class="flex justify-center gap-6">
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/2348119023655" target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-green-600 hover:bg-green-500 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-5 h-5">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.19 1.6 6.02L.1 24l6.16-1.48A11.9 11.9 0 0012 24c6.63 0 12-5.37 12-12S18.63 0 12 0zM4.9 19.1l.35-.58c-.76-1.3-1.15-2.77-1.15-4.27 0-4.49 3.65-8.15 8.15-8.15 2.18 0 4.23.85 5.77 2.39a8.11 8.11 0 012.39 5.76c0 4.5-3.66 8.15-8.16 8.15-1.5 0-2.97-.4-4.27-1.16l-.58.35-3.1.74.74-3.1z"/>
+          </svg>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/j0s_berg?igsh=MTNjZXgzOWFqbzlodA==" target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-pink-600 hover:bg-pink-500 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-5 h-5">
+            <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5a4.25 4.25 0 00-4.25-4.25h-8.5zm4.25 3.25a5.5 5.5 0 110 11 5.5 5.5 0 010-11zm0 1.5a4 4 0 100 8 4 4 0 000-8zm5.25-.5a1 1 0 110 2 1 1 0 010-2z"/>
+          </svg>
+        </a>
+
+        <!-- Facebook -->
+        <a href="#" target="_blank"
+           class="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 hover:bg-blue-500 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-5 h-5">
+            <path d="M22 12a10 10 0 10-11.5 9.95V15h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.5l-.4 3H14v6.95A10 10 0 0022 12z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <p class="text-gray-500 text-xs mt-8">© 2025 t3mpr3ss. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,  // animation speed (ms)
+      once: true       // run only once
+    });
+
+    // Mobile menu
+    const btn = document.getElementById('menuBtn');
+    const closeBtn = document.getElementById('closeBtn');
+    const nav = document.getElementById('mobileNav');
+    const overlay = document.getElementById('overlay');
+
+    btn.addEventListener('click', () => {
+      nav.classList.remove('-translate-x-full');
+      overlay.classList.remove('hidden');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      nav.classList.add('-translate-x-full');
+      overlay.classList.add('hidden');
+    });
+
+    overlay.addEventListener('click', () => {
+      nav.classList.add('-translate-x-full');
+      overlay.classList.add('hidden');
+    });
+  </script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+  const swiper = new Swiper('.mySwiper', {
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+  </script>
+
+
+ <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/2348012345678?text=Hello%20SmartBuild%2C%20I%20need%20a%20quote"
+   target="_blank"
+   class="fixed bottom-6 right-6 bg-green-600 hover:bg-green-500 w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-7 h-7">
+    <path d="M12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.19 1.6 6.02L.1 24l6.16-1.48A11.9 11.9 0 0012 24c6.63 0 12-5.37 12-12S18.63 0 12 0zM4.9 19.1l.35-.58c-.76-1.3-1.15-2.77-1.15-4.27 0-4.49 3.65-8.15 8.15-8.15 2.18 0 4.23.85 5.77 2.39a8.11 8.11 0 012.39 5.76c0 4.5-3.66 8.15-8.16 8.15-1.5 0-2.97-.4-4.27-1.16l-.58.35-3.1.74.74-3.1z"/>
+  </svg>
+  </a>
+
+  
+
+
+</body>
+</html>
